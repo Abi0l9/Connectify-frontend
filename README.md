@@ -1,70 +1,46 @@
-# Getting Started with Create React App
+# Connectify: Social App Frontend
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A React frontend exploring social interactions and **real-time GraphQL**. The application combines GraphQL queries, mutations, and subscriptions with client-side state and routing.
 
-## Available Scripts
+## Features represented in the frontend
 
-In the project directory, you can run:
+- User registration and authentication flows
+- Profiles, users, and feeds
+- Friend requests and friend-list updates
+- Messaging-related events and notifications
+- Real-time updates through GraphQL subscriptions
 
-### `npm start`
+## Technology
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+React 18 · Apollo Client · GraphQL · graphql-ws · Redux Toolkit · React Router · Material UI
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## How it works
 
-### `npm test`
+- Apollo Client handles GraphQL operations and caching.
+- HTTP requests and WebSocket subscriptions use separate links.
+- Redux manages frontend application state.
+- React Router manages client-side navigation.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Run locally
 
-### `npm run build`
+```bash
+git clone https://github.com/Abi0l9/Connectify-frontend.git
+cd Connectify-frontend
+npm install
+npm start
+```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+The frontend runs at `http://localhost:3000` by default.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+**Backend requirement:** The current Apollo configuration expects a compatible GraphQL service at `http://localhost:4000` and subscriptions at `ws://localhost:4000`. The backend is **not included in this frontend repository**, so interactive functionality requires that service to be running.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Where to look
 
-### `npm run eject`
+- `src/index.js`: Apollo HTTP/WebSocket link setup
+- `src/App.js`: top-level queries, subscriptions, and client-side interactions
+- `src/Queries/`: GraphQL operations
+- `src/reducers/`: Redux state management
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Scope
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+This is a frontend code sample. The repository showcases React application structure and GraphQL integration; it does not claim to provide a standalone hosted social network.
